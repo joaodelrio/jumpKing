@@ -23,8 +23,6 @@ let score = 0;
 let isStart = false;
 let distanceObstacles = [300, 450, 600];
 let nextObstacleDistance = distanceObstacles[randomIntFromRange(0, 2)];
-ambientSound.play();
-
 // Classes do jogo
 var knight = new Knight();
 var explosion = new Explosion(knight.x, knight.y);
