@@ -7,6 +7,7 @@ const banner = document.getElementById('banner');
 const explosionSound = document.getElementById('explosionSound');
 explosionSound.volume = 0.3;  
 const ambientSound = document.getElementById('ambientSound');
+ambientSound.play();
 ambientSound.loop = true;
 const jumpSound = document.getElementById('jumpSound')
 
