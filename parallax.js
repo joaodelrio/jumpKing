@@ -17,7 +17,7 @@ var ctx = canvas.getContext('2d');
 /**
 * Classes
 */
-export class Background {
+class Background {
 	constructor() {
 		this.img = new Image();
 		this.img.src = images.bg;
@@ -30,7 +30,7 @@ export class Background {
 	}
 }
 
-export class Clouds {
+class Clouds {
 	constructor() {
 		this.totalSeconds = 0;
 		this.speed = 10;
@@ -54,7 +54,7 @@ export class Clouds {
 	}
 }
 
-export class Hills {
+class Hills {
 	constructor() {
 		this.totalSeconds = 0;
 		this.speed = 20;
@@ -78,7 +78,7 @@ export class Hills {
 	}
 }
 
-export class Trees {
+class Trees {
 	constructor() {
 		this.totalSeconds = 0;
 		this.speed = 30;
@@ -102,7 +102,7 @@ export class Trees {
 	}
 }
 
-export class Bushes {
+class Bushes {
 	constructor() {
 		this.totalSeconds = 0;
 		this.speed = 30;
@@ -126,7 +126,7 @@ export class Bushes {
 	}
 }
 
-export class Ground {
+class Ground {
 	constructor() {
 		this.totalSeconds = 20;
 		this.speed = 50;
@@ -148,4 +148,36 @@ export class Ground {
         }
 		ctx.restore();
 	}
+}
+
+export class Parallax {
+    constructor() {
+        this.bg = new Background();
+        this.cloud = new Clouds();
+        this.hills = new Hills();
+        this.trees = new Trees();
+        this.bushes = new Bushes();
+        this.ground = new Ground();
+        this.lastFrameTime = 0;
+    }
+
+    draw() {
+        var now = Date.now();
+        var deltaSeconds = (now - this.lastFrameTime) / 200;
+        this.lastFrameTime = now;
+        this.bg.draw(deltaSeconds);
+        this.cloud.draw(deltaSeconds);
+        this.hills.draw(deltaSeconds);
+        this.trees.draw(deltaSeconds);
+        this.bushes.draw(deltaSeconds);
+        this.ground.draw(deltaSeconds);
+    }
+
+    stop() {
+        this.ground.totalSeconds = 0;
+        this.cloud.totalSeconds = 0;
+        this.hills.totalSeconds = 0;
+        this.trees.totalSeconds = 0;
+        this.bushes.totalSeconds = 0;
+    }
 }
