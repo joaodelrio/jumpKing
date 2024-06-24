@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jump King</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f7f7f7;
+        }
+        canvas {
+            border: 1px solid #000;
+            background: #fff;
+        }
+    </style>
+    
+</head>
+<body id="body" style="background-image: url('background/bg3.png')">
+    <audio id="explosionSound" src="sound/explosion.mp3"></audio>
+    <audio id="ambientSound" src="sound/ambient_sound.mp3" autoplay="true"></audio>
+    <canvas id="gameCanvas" width="1000" height="400"></canvas>
+    <img id="warriorImage" src="image/warrior1.png" style="display: none;">
+    <img id="warriorImage2" src="image/warrior2.png" style="display: none;">
+    <img id="warriorImage3" src="image/warrior3.png" style="display: none;">
+    <img id="barrelImage" src="image/barrel.png" style="display: none;">
+    <img id="explosion1" src="image/explosion/explosion1.png" style="display: none;">
+    <img id="explosion2" src="image/explosion/explosion2.png" style="display: none;">
+    <img id="explosion3" src="image/explosion/explosion3.png" style="display: none;">
+    <img id="explosion4" src="image/explosion/explosion4.png" style="display: none;">
+    <img id="explosion5" src="image/explosion/explosion5.png" style="display: none;">
+    <img id="explosion6" src="image/explosion/explosion6.png" style="display: none;">
+    <img id="explosion7" src="image/explosion/explosion7.png" style="display: none;">
+    <img id="banner" src="image/ui/banner.png" style="display: none;"> 
+    <script type="module" src="game.js"></script>
+    <script type="module" src="parallax.js"></script>
+</body>
+</html>
