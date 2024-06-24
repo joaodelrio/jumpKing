@@ -7,7 +7,6 @@ const banner = document.getElementById('banner');
 const explosionSound = document.getElementById('explosionSound');
 explosionSound.volume = 0.3;  
 const ambientSound = document.getElementById('ambientSound');
-ambientSound.play();
 ambientSound.loop = true;
 const jumpSound = document.getElementById('jumpSound')
 
@@ -24,6 +23,7 @@ let score = 0;
 let isStart = false;
 let distanceObstacles = [300, 450, 600];
 let nextObstacleDistance = distanceObstacles[randomIntFromRange(0, 2)];
+ambientSound.play();
 
 // Classes do jogo
 var knight = new Knight();
