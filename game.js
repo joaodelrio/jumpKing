@@ -18,7 +18,7 @@ import { Knight, Explosion, Obstacle, Collision} from "./gameClasses.js";
 //Variaveis do jogo
 let screenshot = null;
 let obstacles = [];
-let gameSpeed = 2.5;
+let gameSpeed = 3;
 let score = 0;
 let isStart = false;
 let distanceObstacles = [300, 450, 600];
